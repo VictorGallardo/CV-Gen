@@ -1,0 +1,23 @@
+>>>nombre
+Eustaquio Jimenez Moreno
+>>>edad
+35
+>>>telefono
+849578390
+>>>correo
+eusjimo@trapistmail.com
+>>>formacion
+Técnico de Desarrollo de Aplicaciones Multiplataforma por el IES Kapteyn-1e
+Ingeniero de software por la Universidad de Kepler-296
+Scrum Master
+>>>experiencia
+Programador senior en Google
+Programador junior en ByEvolution
+>>>habilidades
+Capacidad de comunicación. 
+Capacidad para gestionar el estrés.
+Adaptación o flexibilidad. 
+Capacidad para innovar
+>>>perfil
+Como persona organizada y con una gran motivación, soy capaz de adaptarme a cualquier circunstancia y dar siempre lo mejor de mí en cualquier proyecto, al mismo tiempo que me esfuerzo por trabajar en equipo y fomentar valores como los del compañerismo.
+
