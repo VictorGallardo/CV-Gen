@@ -20,7 +20,7 @@ java Cv_Gen cv curriculum
 
 ```
 # Imagen 
-Si queremos añadir una imagen la imagen deberá ir en la carpeta img, el nobmre de la imagen será: img.jpg
+Para añadir una imagen, está debe ir en la carpeta img, el nombre de la imagen será: img.jpg
 
 # Cv generado en html
 Una vez generado el html la vista desde el nevegador sera algo asi:
