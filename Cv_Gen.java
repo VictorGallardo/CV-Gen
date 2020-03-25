@@ -1,4 +1,4 @@
-package cv_generator;
+
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,16 +7,22 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-
 public class Cv_Gen {
-  public static void main(String[] args) throws IOException {
+
+  public static void main(String[] args) {
+
+    if (args.length != 2) {
+      System.out.println("USO: Introducir dos parametros, [TXT] [HTML]");
+      System.out.println("Ejempo: java Cv_Gen cv curriculum");
+      System.exit(-1);
+    }
 
     String archivo = "";
 
     try {
 
-      BufferedReader br = new BufferedReader(new FileReader("cv.txt"));
-      BufferedWriter bw = new BufferedWriter(new FileWriter("index.html"));
+      BufferedReader br = new BufferedReader(new FileReader(args[0] + ".txt"));
+      BufferedWriter bw = new BufferedWriter(new FileWriter(args[1] + ".html"));
 
       String line = "";
       while ((line = br.readLine()) != null) {
@@ -29,7 +35,7 @@ public class Cv_Gen {
         + "<title>Curriculum Vitae</title>\n"
         + "\n"
         + "<meta name=\"viewport\" content=\"width=device-width\"/>\n"
-        + "<meta name=\"description\" content=\"The Curriculum Vitae of Joe Bloggs.\"/>\n"
+        + "<meta name=\"description\" content=\"The Curriculum Vitae\"/>\n"
         + "<meta charset=\"UTF-8\"> \n"
         + "\n"
         + "<link type=\"text/css\" rel=\"stylesheet\" href=\"style.css\">\n"
@@ -41,7 +47,7 @@ public class Cv_Gen {
         + "<div id=\"cv\" class=\"instaFade\">\n"
         + "	<div class=\"mainDetails\">\n"
         + "		<div id=\"headshot\" class=\"quickFade\">\n"
-        + "			<img src=\"img.jpg\" alt=\"foto-perfil\" />\n"
+        + "			<img src=\"img/img.jpg\" alt=\"foto-perfil\" />\n"
         + "		</div>\n"
         + "		\n"
         + "		<div id=\"name\">\n");
@@ -69,8 +75,8 @@ public class Cv_Gen {
         + "					<h1>Perfil Personal</h1>\n"
         + "				</div>\n"
         + "				\n"
-        + "				<div class=\"sectionContent\">\n" );
-     
+        + "				<div class=\"sectionContent\">\n");
+
       String[] perfil = archivo.substring(archivo.indexOf(">>>perfil") + 9).trim().split("\n");
       for (String per : perfil) {
         bw.write("<p>" + per + "</p>\n");
@@ -111,7 +117,6 @@ public class Cv_Gen {
         bw.write("<li>" + hab + "</li>\n");
       }
       bw.write("		</ul></br>\n"
-        
         + "			</div>\n"
         + "			<div class=\"clear\"></div>\n"
         + "		</section>\n"
