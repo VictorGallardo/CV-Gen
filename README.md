@@ -10,7 +10,7 @@ Los parámetros se recogen por línea de comandos, es decir por consola.
 Primero debemos compilar el programa:
 
 ```
-Javac Cv_Gen.java
+javac Cv_Gen.java
 
 ```
 Una vez compilado debemos ejecutarlo como se muestra en el siguiente ejemplo:
